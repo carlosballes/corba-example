@@ -19,6 +19,36 @@ class HelloImpl extends HelloPOA {
   public String sayHello() {
     return "\nHello world !!\n";
   }
+  
+  public String Mayus(String a) {
+    return a.toUpperCase();
+  }
+
+  public String Minus(String a) {
+    return a.toLowerCase();
+  }
+
+  public String ContarPalabras(String a) {
+    String[] palabras= a.split(" ");
+    int longitud =palabras.length();
+    System.out.println(longitud);
+    return longitud.toString();
+    
+  }
+
+  public String PalabraLarga(String a) {
+    String palabra="";
+    String separa= a.split(" ");
+    int cuenta =0;
+    for(int i=0; i<separa.length();i++){
+      if(separa[i].length() > cuenta){
+        cuenta = separa[i].length();
+        palabra=separa[i];
+      }
+    }
+    return palabra;
+
+  }
     
   // implement shutdown() method
   public void shutdown() {

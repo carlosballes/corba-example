@@ -3,6 +3,10 @@ module HelloApp
   interface Hello
   {
     string sayHello();
+    string Mayus(in string a);
+    string Minus(in string a);
+    string ContarPalabras(in string a);
+    string PalabraLarga(in string a);
     oneway void shutdown();
   };
 };
